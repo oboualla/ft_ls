@@ -1,0 +1,4 @@
+*.o
+libft.a
+*.swp
+ft_ls
