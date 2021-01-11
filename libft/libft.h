@@ -6,7 +6,7 @@
 /*   By: oboualla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 19:28:30 by oboualla          #+#    #+#             */
-/*   Updated: 2019/06/18 00:58:00 by oboualla         ###   ########.fr       */
+/*   Updated: 2019/07/07 16:29:38 by oboualla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ typedef struct			s_list
 	size_t				content_size;
 	struct s_list		*next;
 }						t_list;
-
+void					ft_putlnbr(long int nbr);
+void					ft_sort_params(char **av);
 int						ft_skip_lensep(char const *str, char *sp);
 int						ft_skip_sep(const char *str, char *sep);
 int						ft_is_separ(char const *str, char c);

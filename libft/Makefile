@@ -6,7 +6,7 @@
 #    By: oboualla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/31 20:59:16 by oboualla          #+#    #+#              #
-#    Updated: 2019/06/07 17:29:27 by oboualla         ###   ########.fr        #
+#    Updated: 2019/07/12 03:50:57 by oboualla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,15 +35,15 @@ src =	ft_atoi.c ft_bzero.c ft_change_chr_to_nwchr.c\
 		ft_striter.c ft_striteri.c ft_strjoin.c \
 		ft_strlcat.c ft_strlen.c ft_strmap.c \
 		ft_strmapi.c ft_strncat.c	ft_strncmp.c \
-		ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c \
+		ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c ft_putlnbr.c \
 		ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c \
-		ft_strtrim.c ft_tolower.c ft_toupper.c ft_wordlen.c 
+		ft_strtrim.c ft_tolower.c ft_toupper.c ft_wordlen.c ft_sort_params.c
 
 obj = ft_atoi.o ft_bzero.o ft_change_chr_to_nwchr.o\
 	  ft_count_char.o ft_count_to_find.o ft_count_word.o\
 	  ft_is_separ.o ft_isalnum.o ft_isalpha.o \
 	  ft_isascii.o ft_isdigit.o ft_isprint.o\
-	  ft_itoa.o ft_lstadd.o ft_lstdel.o\
+	  ft_itoa.o ft_lstadd.o ft_lstdel.o ft_putlnbr.o \
 	  ft_lstdelone.o ft_lstiter.o ft_lstmap.o\
 	  ft_lstnew.o ft_memalloc.o ft_memccpy.o\
 	  ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memdel.o\
@@ -60,19 +60,19 @@ obj = ft_atoi.o ft_bzero.o ft_change_chr_to_nwchr.o\
 	  ft_strmapi.o ft_strncat.o   ft_strncmp.o \
 	  ft_strncpy.o ft_strnequ.o ft_strnew.o ft_strnstr.o \
 	  ft_strrchr.o ft_strsplit.o ft_strstr.o ft_strsub.o \
-	  ft_strtrim.o ft_tolower.o ft_toupper.o ft_wordlen.o 
+	  ft_strtrim.o ft_tolower.o ft_toupper.o ft_wordlen.o ft_sort_params.o
 
 all : $(NAME)
 
 $(NAME) : 
-	$(CC) -c $(src) -Iincludes
-	ar rc $(NAME) $(obj)
+	@$(CC) -c $(src) -Iincludes
+	@ar rc $(NAME) $(obj)
 
 clean :
-	$(rm) *.o
+	@$(rm) *.o
 
 fclean : clean
-	$(rm) $(NAME)
+	@$(rm) $(NAME)
 
 re : fclean all
 
